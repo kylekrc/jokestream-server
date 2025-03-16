@@ -5,6 +5,11 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
+// Root route ("/") - Custom message
+app.get("/", (req, res) => {
+  res.send("Welcome to the Joke API! Use /joke to get a random joke.");
+});
+
 // Endpoint to fetch a joke
 app.get("/joke", async (req, res) => {
   try {
@@ -16,4 +21,4 @@ app.get("/joke", async (req, res) => {
   }
 });
 
-module.exports = app; // Remove app.listen() for Vercel deployment
+module.exports = app;
