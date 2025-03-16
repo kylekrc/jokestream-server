@@ -8,8 +8,8 @@ app.use(cors());
 // Root route ("/") - Custom message
 app.get("/", (req, res) => {
   res.send(
-    "Welcome to the Joke API! Use /joke to get a random joke.\n" +
-    "Note: This is a simple API that fetches jokes in real-time. " 
+    "Welcome to the Joke API! Server is running, you can now get a joke!\n" +
+    "Note: Do not close this link to make JokeAPI work!" 
   );
 });
 
