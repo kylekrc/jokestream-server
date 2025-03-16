@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 // Endpoint to fetch a joke
 app.get("/joke", async (req, res) => {
   try {
-    const jokeResponse = await axios.get("https://v2.jokeapi.dev/joke/Any?type=single");
+    const jokeResponse = await axios.get("https://v2.jokeapi.dev/joke/Any?type=single&blacklistFlags=racist,sexist,explicit,religious,political");
     const joke = jokeResponse.data.joke || "No joke available!";
     res.json({ joke });
   } catch (error) {
